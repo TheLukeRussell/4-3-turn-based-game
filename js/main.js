@@ -1,4 +1,4 @@
-console.log('Hello, World!')
+
 const logo = document.querySelector('.mk-logo');
 // Get the modal
 const modal = document.getElementById("myModal");
@@ -9,6 +9,7 @@ const btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
 const span = document.getElementsByClassName("close")[0];
+
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -30,3 +31,44 @@ window.onclick = function(event) {
   }
 }
 
+class Hero {
+  constructor(options) {
+    options = options || {};
+
+    this.name = options.name;
+    this.attack = options.attack;
+  }
+}
+
+class Enemy {
+  constructor(options) {
+    options = options || {};
+
+    this.name = options.name;
+    this.attack = options.attack;
+  }
+}
+
+let scorpian = new Hero({
+  name: 'Scorpian',
+  attack: 'sting',
+  image: '/images/yellow-guy-resize.png'
+});
+
+let subZero = new Hero({
+  name: 'Sub Zero',
+  attack: 'frostbite',
+  image: '/images/sub-zero.png'
+});
+
+let freddy = new Enemy({
+  name: 'Freddy',
+  attack: 'nightmare',
+  image: '/images/freddy.png'
+})
+
+let ermac = new Enemy({
+  name: 'Ermac',
+  attack: 'crush',
+  image: '/images/green-guy.png'
+})
