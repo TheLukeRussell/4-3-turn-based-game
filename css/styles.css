@@ -1,18 +1,22 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 img {
-  width: 100%; }
+  width: 100%;
+}
 
 body {
-  background-image: url("./../images/backgroundimg.png");
+  background-image: url("/images/backgroundimg.png");
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+}
 
 .mk-logo {
   width: 40%;
   position: relative;
-  left: 30%; }
+  left: 30%;
+}
 
 .pick-fighter button {
   padding: 20px;
@@ -21,6 +25,7 @@ body {
   position: relative;
   left: 40%;
   background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
-  border: none; }
+  border: none;
+}
 
 /*# sourceMappingURL=styles.css.map */
