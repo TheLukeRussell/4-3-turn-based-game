@@ -16,6 +16,7 @@ body {
   width: 40%;
   position: relative;
   left: 30%;
+  transition: ease .5s;
 }
 
 .pick-fighter {
@@ -33,11 +34,7 @@ body {
     border: none;
   }
 
-  button:active {
-    color: black;
-    background-image: none;
-    background-color: white;
-  }
+
   button::after {
     content: "Pick Your Fighter";
   }
@@ -50,6 +47,7 @@ body {
     background-image: none;
   }
 }
+
 
 .modal {
   display: none;

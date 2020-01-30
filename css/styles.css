@@ -16,6 +16,7 @@ body {
   width: 40%;
   position: relative;
   left: 30%;
+  transition: ease 0.5s;
 }
 
 .pick-fighter button {
@@ -30,11 +31,6 @@ body {
   outline: none;
   background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
   border: none;
-}
-.pick-fighter button:active {
-  color: black;
-  background-image: none;
-  background-color: white;
 }
 .pick-fighter button::after {
   content: "Pick Your Fighter";

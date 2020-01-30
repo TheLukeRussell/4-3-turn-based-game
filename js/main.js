@@ -1,10 +1,11 @@
 console.log('Hello, World!')
-
+const logo = document.querySelector('.mk-logo');
 // Get the modal
 const modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
 const btn = document.getElementById("myBtn");
+
 
 // Get the <span> element that closes the modal
 const span = document.getElementsByClassName("close")[0];
@@ -12,6 +13,9 @@ const span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
   modal.style.display = "block";
+  btn.style.display = 'none';
+  logo.style.width = '15%';
+  logo.style.left = '41.8%';
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -25,3 +29,4 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
