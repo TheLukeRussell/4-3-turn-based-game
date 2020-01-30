@@ -1,3 +1,15 @@
+* {
+  box-sizing: border-box;
+}
 
+img {
+  width: 100%;
+}
+
+body {
+  background-image: url("/images/backgroundimg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 /*# sourceMappingURL=styles.css.map */
