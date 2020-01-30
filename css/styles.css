@@ -19,13 +19,21 @@ body {
 }
 
 .pick-fighter button {
-  padding: 20px;
+  padding: 40px;
   width: 20%;
-  font-size: 50px;
+  font-family: "Press Start 2P", cursive;
+  border-radius: 10px;
+  font-size: 30px;
   position: relative;
   left: 40%;
+  outline: none;
   background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
   border: none;
+}
+.pick-fighter button:active {
+  color: white;
+  background-image: none;
+  background-color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */
