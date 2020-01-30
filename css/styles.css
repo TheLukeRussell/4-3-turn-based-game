@@ -12,4 +12,20 @@ body {
   background-repeat: no-repeat;
 }
 
+.mk-logo {
+  width: 40%;
+  position: relative;
+  left: 30%;
+}
+
+.pick-fighter button {
+  padding: 20px;
+  width: 20%;
+  font-size: 50px;
+  position: relative;
+  left: 40%;
+  background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
+  border: none;
+}
+
 /*# sourceMappingURL=styles.css.map */
