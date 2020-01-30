@@ -26,10 +26,19 @@ body {
         border-radius: 10px;
         font-size: 30px;
         position: relative;
+        animation: blink-button 1s infinite;
         left: 40%;
         outline: none;
         background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
         border: none;
+    }
+    @keyframes blink-button {
+        0%, 49% {
+            opacity: 1;
+        }
+        50%, 100% {
+            opacity: .5;
+        }
     }
     button:active {
         color: white;
