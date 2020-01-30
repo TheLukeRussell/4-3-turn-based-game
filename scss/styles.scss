@@ -1,48 +1,100 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
+
 img {
-    width: 100%;
+  width: 100%;
 }
 
 body {
-    background-image: url('./../images/backgroundimg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url("./../images/backgroundimg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-
 .mk-logo {
-    width: 40%;
-    position: relative;
-    left: 30%;
+  width: 40%;
+  position: relative;
+  left: 30%;
 }
 
 .pick-fighter {
-    button {
-        padding: 40px;
-        width: 20%;
-        font-family: 'Press Start 2P', cursive;
-        border-radius: 10px;
-        font-size: 30px;
-        position: relative;
-        animation: blink-button 1s infinite;
-        left: 40%;
-        outline: none;
-        background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
-        border: none;
+  button {
+    padding: 40px;
+    width: 20%;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 10px;
+    font-size: 30px;
+    position: relative;
+    animation: blink-button 1s infinite;
+    left: 40%;
+    outline: none;
+    background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
+    border: none;
+  }
+  @keyframes blink-button {
+    0%,
+    49% {
+      opacity: 1;
     }
-    @keyframes blink-button {
-        0%, 49% {
-            opacity: 1;
-        }
-        50%, 100% {
-            opacity: .5;
-        }
+
+    100%,
+    50% {
+      opacity: 0.5;
     }
-    button:active {
-        color: white;
-        background-image: none;
-        background-color: black;
-    }
+  }
+
+  button:active {
+    color: white;
+    background-image: none;
+    background-color: black;
+  }
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0,0,0);
+  /* Fallback color */
+  background-color: rgba(0,0,0,0.4);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  // width: 60%;
+  /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:focus,
+.close:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.choose {
+  height: 500px
 }
