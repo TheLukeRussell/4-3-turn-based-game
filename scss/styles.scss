@@ -73,7 +73,7 @@ body {
   /* Black w/ opacity */
 
 
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.4);
   /* background layover when clicked */
 
 }
@@ -87,11 +87,12 @@ body {
 }
 
 .modal-content {
-  background-color: grey;
+  background-color: #000;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid;
   width: 15%;
+  text-align: center;
   /* Could be more or less, depending on screen size */
 }
 
@@ -107,4 +108,10 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+  font-size: 14px;
 }
