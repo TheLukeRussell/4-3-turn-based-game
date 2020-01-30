@@ -1,27 +1,23 @@
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 img {
-  width: 100%;
-}
+  width: 100%; }
 
 body {
   background-image: url("./../images/backgroundimg.png");
   background-size: cover;
-  background-repeat: no-repeat;
-}
+  background-repeat: no-repeat; }
 
 .mk-logo {
   width: 40%;
   position: relative;
-  left: 30%;
-}
+  left: 30%; }
 
 .pick-fighter button {
   padding: 40px;
   width: 20%;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
   border-radius: 10px;
   font-size: 30px;
   position: relative;
@@ -29,21 +25,18 @@ body {
   left: 40%;
   outline: none;
   background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
-  border: none;
-}
+  border: none; }
 @keyframes blink-button {
-  0%, 49% {
-    opacity: 1;
-  }
-  100%, 50% {
-    opacity: 0.5;
-  }
-}
+  0%,
+    49% {
+    opacity: 1; }
+  100%,
+    50% {
+    opacity: 0.5; } }
 .pick-fighter button:active {
   color: white;
   background-image: none;
-  background-color: black;
-}
+  background-color: black; }
 
 .modal {
   display: none;
@@ -63,8 +56,7 @@ body {
   background-color: black;
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
-}
+  /* Black w/ opacity */ }
 
 .modal-content {
   background-color: #fefefe;
@@ -73,25 +65,21 @@ body {
   padding: 20px;
   border: 1px solid #888;
   width: 70%;
-  /* Could be more or less, depending on screen size */
-}
+  /* Could be more or less, depending on screen size */ }
 
 .close {
   color: black;
   float: right;
   font-size: 28px;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .close:focus,
 .close:hover {
   color: black;
   text-decoration: none;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .choose {
-  height: 500px;
-}
+  height: 500px; }
 
 /*# sourceMappingURL=styles.css.map */
