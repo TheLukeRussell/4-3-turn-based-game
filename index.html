@@ -15,9 +15,9 @@
 
     <div class="container-fluid">
 
-        <audio autoplay loop>  
-            <source src="/music/theme-song.mp3" type="audio/mp3">  
-        </audio>  
+        <audio autoplay loop>
+            <source src="/music/theme-song.mp3" type="audio/mp3">
+        </audio>
 
         <div class="row no-gutters">
             <div class="col-12">
@@ -26,11 +26,17 @@
         </div>
         <div class="row">
             <div class="col-12 pick-fighter">
-                <button>PICK YOUR FIGHTER</button>
+                <button id="myBtn">Pick Your Fighter</button>
             </div>
         </div>
 
-
+        <!-- Pop up window for fighter selection -->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>This is where the fighters go</p>
+          </div>
+        </div>
 
 
 

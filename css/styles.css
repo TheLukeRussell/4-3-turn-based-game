@@ -1,27 +1,23 @@
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 img {
-  width: 100%;
-}
+  width: 100%; }
 
 body {
-  background-image: url("/images/backgroundimg.png");
+  background-image: url("./../images/backgroundimg.png");
   background-size: cover;
-  background-repeat: no-repeat;
-}
+  background-repeat: no-repeat; }
 
 .mk-logo {
   width: 40%;
   position: relative;
-  left: 30%;
-}
+  left: 30%; }
 
 .pick-fighter button {
   padding: 40px;
   width: 20%;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
   border-radius: 10px;
   font-size: 30px;
   position: relative;
@@ -29,20 +25,15 @@ body {
   left: 40%;
   outline: none;
   background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
-  border: none;
-}
+  border: none; }
 @keyframes blink-button {
   0%, 49% {
-    opacity: 1;
-  }
+    opacity: 1; }
   50%, 100% {
-    opacity: 0.5;
-  }
-}
+    opacity: .5; } }
 .pick-fighter button:active {
   color: white;
   background-image: none;
-  background-color: black;
-}
+  background-color: black; }
 
 /*# sourceMappingURL=styles.css.map */
