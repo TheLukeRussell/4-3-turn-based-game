@@ -22,32 +22,32 @@ body {
   button {
     padding: 40px;
     width: 20%;
+    height: 200px;
     font-family: 'Press Start 2P', cursive;
     border-radius: 10px;
     font-size: 30px;
     position: relative;
-    animation: blink-button 1s infinite;
     left: 40%;
     outline: none;
     background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
     border: none;
   }
-  @keyframes blink-button {
-    0%,
-    49% {
-      opacity: 1;
-    }
-
-    100%,
-    50% {
-      opacity: 0.5;
-    }
-  }
 
   button:active {
-    color: white;
+    color: black;
     background-image: none;
+    background-color: white;
+  }
+  button::after {
+    content: "Pick Your Fighter";
+  }
+  button:hover::after {
+    content: "Choose carefully..";
+  }
+  button:hover {
+    color: white;
     background-color: black;
+    background-image: none;
   }
 }
 
@@ -84,16 +84,44 @@ body {
         width: 100%;
 
     }
+    .choose-character {
+      text-align: center;
+      font-size: 60px;
+      color: #FFF;
+      background-color: black;
+      margin-top: 50px;
+      font-family: 'Press Start 2P', cursive;
+      animation: blink 1s infinite;
+    }
+}
+@keyframes blink {
+  0%,
+  49% {
+    color: #FFF;
+  }
+
+  100%,
+  50% {
+    color: black;
+  }
 }
 
 .modal-content {
   background-color: #000;
   margin: 0 auto;
-  padding: 20px;
   border: 1px solid;
   width: 15%;
+
   text-align: center;
   /* Could be more or less, depending on screen size */
+
+
+      div.col {
+        border: 10pt solid transparent;
+      }
+      div.col:hover {
+        border: 10pt solid #00FF00;
+      }
 }
 
 .close {
