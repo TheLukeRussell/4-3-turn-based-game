@@ -46,28 +46,28 @@
             <div class="row">
           <div class="row no-gutter modal-content">
             
-            <button class="col pick-me">
+            <button id="scorpian" value="1" class="col pick-me">
               <img src="images/yellow-guy-resize.png" alt="Scorpion" class="scorpion">
               <h1>Scorpion</h1>
             </button>
           </div>
           <div class="row no-gutter modal-content">
             
-            <button class="col pick-me">
+            <button id="subZero" value="2" class="col pick-me">
               <img src="images/sub-zero.png" alt="Sub Zero" class="freddy">
               <h1>Sub Zero</h1>
             </button>
           </div>
           <div class="row no-gutter modal-content">
             
-            <button class="col pick-me">
+            <button id="freddy" value="3" class="col pick-me">
               <img src="images/freddy.png" alt="Freedy" class="freedy">
               <h1>Freddy</h1>
             </button>
           </div>
           <div class="row no-gutter modal-content">
             
-            <button class="col pick-me">
+            <button id="ermac" value="4" class="col pick-me">
               <img src="images/green-guy.png" alt="Green-guy" class="green-guy">
               <h1>Ermac</h1>
             </button>
@@ -101,6 +101,7 @@
             <div class="col-2 center-area">
                 <img id="fatality" src="/images/fatality.png" hidden="true" alt="">
                 <div class="row center-content">
+                    <h3 id="fight-message"></h3>
                     <div class="w-100"></div>
                     <button id="attack-btn" onclick="attack()" class="attack-btn">Attack</button>
                     <button id='restart' onclick="restartGame()" hidden="true">RESTART</button>

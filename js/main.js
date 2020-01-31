@@ -1,14 +1,14 @@
+const charScorpian = document.querySelector('#scorpian')
+const charSubZero = document.querySelector('#subZero')
+const charFreddy = document.querySelector('#freddy')
+const charErmac = document.querySelector('#ermac')
+
 const logo = document.querySelector('.mk-logo');
 // Get the modal
 const modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
 const btn = document.getElementById("myBtn");
-
-
-// Get the <span> element that closes the modal
-// const span = document.getElementsByClassName("close")[0];
-
 
 // When the user clicks on the button, open the modal
 btn.onclick = function () {
@@ -19,10 +19,8 @@ btn.onclick = function () {
 }
 document.querySelector('audio').volume = .1; // lowers volume of main audio
 
-
 // const fightPage = document.querySelector('.fight-page')
 // const choseFighter = document.getElementByClassName('.pick-me');
-
 
 // choseFighter.onclick = function() {
 //   modal.style.display = 'none';
@@ -31,10 +29,11 @@ document.querySelector('audio').volume = .1; // lowers volume of main audio
 //   fightPage.style.display = 'flex';
 // }
 const fightPage = document.querySelector('.fight-page');
+
 let players = document.querySelectorAll('.pick-me');
 
 players.forEach((player) => {
-  player.addEventListener('click', function() {
+  player.addEventListener('click', function () {
     modal.style.display = 'none';
     logo.style.display = 'none';
     btn.style.display = 'none';
@@ -42,32 +41,14 @@ players.forEach((player) => {
   });
 });
 
-
-
-// When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
-
-// When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
-
-
-
 class Hero {
   constructor(options) {
     options = options || {};
 
     this.name = options.name;
     this.move = options.move;
-
   }
 }
-  
 
 class Enemy {
   constructor(options) {
@@ -83,63 +64,55 @@ let heroHealth = 100;
 const attack = () => {
   let fightButton = document.querySelector('#attack-btn'); // identify fight button
   let restart = document.querySelector('#restart'); // identify reset button <button id='' onclick="restart()" hidden="true">FIGHT</button>
-  // let fightMessage = document.querySelector('#fight-message') // identifys whos turn it is or gives a move message
+  let fightMessage = document.querySelector('#fight-message') // identifys whos turn it is or gives a move message
   let heroAttack = Math.floor(Math.random() * 20); // <button id='' onclick="attack()">FIGHT</button> for fight button to make it work
   enemyHealth = enemyHealth - heroAttack; //subtracts player attack from opponent health
-  // insert code that makes health bar change width when opponent loses health
   $('.health-right').css("width", enemyHealth + "%");
-  console.log(heroAttack)
+  // console.log(heroAttack)
 
   fightButton.disabled = true; //disables fight button so user cant button mash
 
   if (heroHealth <= 0) {
+    fightMessage.textContent = "You Lose"
     endGame()
   }
   if (enemyHealth <= 0) {
+    fightMessage.textContent = "You Win!"
     endGame()
   }
 
   setTimeout(() => {
     let enemyAttack = Math.floor(Math.random() * 20);
     heroHealth = heroHealth - enemyAttack;
-    // insert code that makes health bar change width when opponent loses health
     $('.health-left').css("width", heroHealth + "%");
-    console.log(enemyAttack)
+    // console.log(enemyAttack)
 
     fightButton.disabled = false; //disables fight button when opponent attacks
-  }, 500);
+  }, 100);
 }
 
-
 let audio = new Audio();
-  audio.src = "/music/fatality.mp3";
-
-
+audio.src = "/music/fatality.mp3";
 
 const endGame = () => {
   document.querySelector('#fatality').hidden = false;
   document.querySelector('#attack-btn').hidden = true; // identify fight button
   document.querySelector('#restart').hidden = false;
   audio.play();
-
 }
-
 
 const restartGame = () => {
   let attackButton = document.querySelector('#attack-btn')
   enemyHealth = 100;
   heroHealth = 100;
-  // document.querySelector('#fight-message').textContent = ''
+  document.querySelector('#fight-message').textContent = ''
   attackButton.disabled = false;
   attackButton.hidden = false;
   document.querySelector('.health-left').style.width = '100%';
   document.querySelector('.health-right').style.width = '100%';
   document.querySelector('#fatality').hidden = true;
   document.querySelector('#restart').hidden = true;
-
 }
-
-
 
 let scorpian = new Hero({
   name: 'Scorpian',
