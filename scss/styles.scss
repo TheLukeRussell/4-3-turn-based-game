@@ -13,7 +13,7 @@ background-repeat: no-repeat;
 }
 
 .mk-logo {
-  display: none;
+  // display: none;
   width: 40%;
   position: relative;
   left: 30%;
@@ -33,7 +33,7 @@ background-repeat: no-repeat;
     outline: none;
     background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
     border: none;
-    display: none;
+    // display: none;
   }
 
 
@@ -122,10 +122,11 @@ h2 {
   /* Could be more or less, depending on screen size */
 
 
-      div.col {
+      button.col {
+        background-color: black;
         border: 10pt solid transparent;
       }
-      div.col:hover {
+      button.col:hover {
         border: 10pt solid #00FF00;
       }
 }
@@ -153,7 +154,8 @@ h1 {
 // fight page css attributes
 
 .fight-page {
-  // display: none;
+
+  display: none;
   padding: 50px;
 }
 .health-right {
@@ -182,6 +184,7 @@ h1 {
 
 .fightspace {
   text-align: center;
+  
 }
 
 .fighter {

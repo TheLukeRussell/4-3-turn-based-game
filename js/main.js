@@ -17,6 +17,28 @@ btn.onclick = function () {
   logo.style.width = '15%';
   logo.style.left = '41.8%';
 }
+// const fightPage = document.querySelector('.fight-page')
+// const choseFighter = document.getElementByClassName('.pick-me');
+
+
+// choseFighter.onclick = function() {
+//   modal.style.display = 'none';
+//   logo.style.display = 'none';
+//   btn.style.display = 'none';
+//   fightPage.style.display = 'flex';
+// }
+const fightPage = document.querySelector('.fight-page');
+let players = document.querySelectorAll('.pick-me');
+
+players.forEach((player) => {
+  player.addEventListener('click', function() {
+    modal.style.display = 'none';
+    logo.style.display = 'none';
+    btn.style.display = 'none';
+    fightPage.style.display = 'flex';
+  });
+});
+
 
 
 // When the user clicks on <span> (x), close the modal
