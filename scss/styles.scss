@@ -13,6 +13,7 @@ body {
 }
 
 .mk-logo {
+  display: none;
   width: 40%;
   position: relative;
   left: 30%;
@@ -32,6 +33,7 @@ body {
     outline: none;
     background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
     border: none;
+    display: none;
   }
 
 
@@ -151,7 +153,7 @@ h1 {
 // fight page css attributes
 
 .fight-page {
-  display: none;
+  // display: none;
 }
 
 .col-5 {
@@ -174,15 +176,17 @@ h1 {
   width: 90%;
 }
 
- 
+ .center-area {
+   position: relative;
+ }
+
+ .center-content {
+   position: absolute;
+   top: 70%;
+   right: 48%;
+   
+ }
   
-
-
-.centerimg {
-  position: relative;
-  top: 35%;
-}
-
 .attack-btn {
   font-family: 'Press Start 2P', cursive;
   border-radius: 10px;
@@ -192,6 +196,12 @@ h1 {
   outline: none;
   background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
   border: none;
-    
-    
+  padding: 40px;
 }
+
+.attack-btn:hover {
+  color: #FFF;
+  background-color: black;
+  background-image: none;
+}
+
