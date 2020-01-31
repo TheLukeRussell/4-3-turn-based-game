@@ -107,7 +107,7 @@ const attack = () => {
     console.log(enemyAttack)
 
     fightButton.disabled = false; //disables fight button when opponent attacks
-  }, 100);
+  }, 500);
 }
 
 
