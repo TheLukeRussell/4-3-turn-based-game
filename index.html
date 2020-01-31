@@ -86,9 +86,9 @@
         <!-- FIGHT PAGE -->
         <div class="row fight-page">
             
-            <div class="col-5">
+            <div class="col">
                 <div class="row">
-                    <div class="col health"></div>
+                    <div class="health-left"></div>
                     <div class="w-100"></div>
                     <div class="col fightspace">
                         <img src="images/sub-zero.png" alt="" class="fighter">
@@ -99,13 +99,14 @@
             <div class="col-2 center-area">
                 <div class="row center-content">
                     <div class="w-100"></div>
-                    <button class="attack-btn">Attack</button>
+                    <button id="attack-btn" onclick="attack()" class="attack-btn">Attack</button>
+                    <!-- <button id='restart' onclick="restart()" hidden="true">RESTART</button> -->
                 </div>
             </div>
 
-            <div class="col-5">
+            <div class="col">
                 <div class="row">
-                    <div class="col health"></div>
+                    <div class="health-right"></div>
                     <div class="w-100"></div>
                     <div class="col fightspace">
                         <img src="images/green-guy.png" alt="" class="fighter">

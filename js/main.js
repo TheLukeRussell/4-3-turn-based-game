@@ -71,13 +71,13 @@ class Enemy {
   }
 }
 const attack = () => {
-  let fightButton = document.querySelector(''); // identify fight button
-  let restart = document.querySelector(''); // identify reset button <button id='' onclick="restart()" hidden="true">FIGHT</button>
-  let fightMessage = document.querySelector('') // identifys whos turn it is or gives a move message
+  let fightButton = document.querySelector('#attack-btn'); // identify fight button
+  // let restart = document.querySelector(''); // identify reset button <button id='' onclick="restart()" hidden="true">FIGHT</button>
+  // let fightMessage = document.querySelector('') // identifys whos turn it is or gives a move message
   let heroAttack = Math.floor(Math.random() * 20); // <button id='' onclick="attack()">FIGHT</button> for fight button to make it work
   Enemy.health = Enemy.health - heroAttack; //subtracts player attack from opponent health
   // insert code that makes health bar change width when opponent loses health
-  // console.log(heroAttack)
+  console.log(heroAttack)
 
 if (gameFinish(Enemy.health)) { //shows win message 
     endGame('Hero won fight');
@@ -85,14 +85,15 @@ if (gameFinish(Enemy.health)) { //shows win message
 }
 
   fightButton.disabled = true; //disables fight button so user cant button mash
-  fightMessage.textContent = "Opponent is about to use a move"
-
+  // fightMessage.textContent = "Opponent is about to use a move"
+ 
 
   setTimeout(() => {
     let enemyAttack = Math.floor(Math.random() * 20);
     Hero.health = Hero.health - enemyAttack;
     // insert code that makes health bar change width when opponent loses health
-
+    
+    console.log(enemyAttack)
     if (gameFinish(Hero.health)) { //shows loss message
       endGame('Opponent won fight');
     return
@@ -103,9 +104,9 @@ if (gameFinish(Enemy.health)) { //shows win message
 }
 
 const endGame = (message) => {
-  document.querySelector('fightmessage').textContent = message
-  document.querySelector('fightButton').hidden = true; // identify fight button
-  document.querySelector('restart').hidden = false; //identify restart button
+  // document.querySelector('fightmessage').textContent = message
+  document.querySelector('#attack-btn').hidden = true; // identify fight button
+  // document.querySelector('restart').hidden = false; //identify restart button
 }
 
 const gameFinish = (health) => { //gameFinishes when any health is 0 or below
@@ -113,7 +114,7 @@ const gameFinish = (health) => { //gameFinishes when any health is 0 or below
 }
 
 const restartGame = () => {
-  let attackButton = document.querySelector('fightbutton')
+  let attackButton = document.querySelector('#attack-btn')
   Hero.health = 100;
   Enemy.health = 100;
   document.querySelector('fightmessage').textContent = ''
