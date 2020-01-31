@@ -115,13 +115,23 @@ h1 {
   color: #fff;
   font-size: 14px; }
 
-.col-5 {
-  height: 600px; }
+.fight-page {
+  padding: 100px; }
+
+.com-name {
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+  font-size: 15px;
+  text-align: right; }
+
+.play-name {
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+  font-size: 15px; }
 
 .health {
-  background-color: blue;
-  height: 35px;
-  border: solid 1px yellow; }
+  background-color: #00A265;
+  height: 35px; }
 
 .fightspace {
   text-align: center; }
@@ -129,7 +139,8 @@ h1 {
 .fighter {
   position: relative;
   top: 20px;
-  width: 90%; }
+  width: 90%;
+  padding: 50px; }
 
 .center-area {
   position: relative; }
