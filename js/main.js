@@ -65,7 +65,6 @@ let scorpian = new Hero({
   name: 'Scorpian',
   attack: 'sting',
   health: 100,
-
   image: '/images/yellow-guy-resize.png'
 });
 
@@ -73,7 +72,6 @@ let subZero = new Hero({
   name: 'Sub Zero',
   attack: 'frostbite',
   health: 100,
-
   image: '/images/sub-zero.png'
 });
 
@@ -81,7 +79,6 @@ let freddy = new Enemy({
   name: 'Freddy',
   attack: 'nightmare',
   health: 100,
-
   image: '/images/freddy.png'
 })
 
@@ -89,7 +86,6 @@ let ermac = new Enemy({
   name: 'Ermac',
   attack: 'crush',
   health: 100,
-
   image: '/images/green-guy.png'
 })
 

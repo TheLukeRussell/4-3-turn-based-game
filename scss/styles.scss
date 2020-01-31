@@ -42,12 +42,18 @@ body {
     content: "Choose carefully..";
   }
   button:hover {
-    color: white;
+    color: #FFF;
     background-color: black;
     background-image: none;
   }
 }
-
+h2 {
+  text-align: center;
+  color: #FFF;
+  font-family: 'Press Start 2P', cursive;
+  padding: 30px;
+  // animation: blink 1s infinite;
+}
 
 .modal {
   display: none;
@@ -100,7 +106,7 @@ body {
 
   100%,
   50% {
-    color: black;
+    color: transparent;
   }
 }
 
