@@ -143,6 +143,7 @@ h1 {
   background-color: #00A265;
   height: 35px;
   width: 100%;
+  float: right;
 }
 
 .health-left {
@@ -185,7 +186,7 @@ h1 {
   right: 48%;
 }
 
-#attack-btn, #restart {
+#attack-btn {
   font-family: "Press Start 2P", cursive;
   border-radius: 10px;
   font-size: 30px;
@@ -197,7 +198,33 @@ h1 {
   padding: 40px;
 }
 
+#restart {
+  font-family: "Press Start 2P", cursive;
+  border-radius: 10px;
+  font-size: 30px;
+  position: relative;
+  left: 40%;
+  top: 200px;
+  outline: none;
+  background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
+  border: none;
+  padding: 40px;
+}
+
+#fatality {
+  position: absolute;
+  top: 30%;
+  left: -80%;
+  width: 250%;
+}
+
 #attack-btn:hover {
+  color: #FFF;
+  background-color: black;
+  background-image: none;
+}
+
+#restart:hover {
   color: #FFF;
   background-color: black;
   background-image: none;
