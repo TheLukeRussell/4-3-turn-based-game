@@ -8,8 +8,8 @@ img {
 
 body {
   background-image: url("./../images/backgroundimg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 .mk-logo {
@@ -154,7 +154,7 @@ h1 {
 
 .fight-page {
   // display: none;
-  padding: 100px;
+  padding: 50px;
 }
 .health-right {
   background-color: #00A265;
@@ -186,9 +186,9 @@ h1 {
 
 .fighter {
   position: relative;
-  top: 20px;
-  width: 90%;
-  padding: 50px;
+  width: 80%;
+  top: 50px;
+ padding: 80px;
 }
 
  .center-area {
@@ -219,7 +219,7 @@ h1 {
   font-size: 30px;
   position: relative;
   left: 40%;
-  top: 200px;
+  top: 100px;
   outline: none;
   background-image: radial-gradient(#FF7827 10%, #FC231B 30%, #7C010C 65%, #2B1410 100%);
   border: none;

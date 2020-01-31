@@ -62,6 +62,7 @@ const attack = () => {
   let heroAttack = Math.floor(Math.random() * 20); // <button id='' onclick="attack()">FIGHT</button> for fight button to make it work
   enemyHealth = enemyHealth - heroAttack; //subtracts player attack from opponent health
   // insert code that makes health bar change width when opponent loses health
+  $('.health-right').css("width", enemyHealth + "%");
   console.log(heroAttack)
 
   fightButton.disabled = true; //disables fight button so user cant button mash
@@ -77,7 +78,7 @@ const attack = () => {
     let enemyAttack = Math.floor(Math.random() * 20);
     heroHealth = heroHealth - enemyAttack;
     // insert code that makes health bar change width when opponent loses health
-
+    $('.health-left').css("width", heroHealth + "%");
     console.log(enemyAttack)
 
     fightButton.disabled = false; //disables fight button when opponent attacks
@@ -85,12 +86,17 @@ const attack = () => {
 }
 
 
+let audio = new Audio();
+  audio.src = "/music/fatality.mp3";
+
 
 
 const endGame = () => {
   document.querySelector('#fatality').hidden = false;
   document.querySelector('#attack-btn').hidden = true; // identify fight button
-  document.querySelector('#restart').hidden = false; //identify restart button
+  document.querySelector('#restart').hidden = false;
+  audio.play();
+
 }
 
 
@@ -101,8 +107,11 @@ const restartGame = () => {
   // document.querySelector('#fight-message').textContent = ''
   attackButton.disabled = false;
   attackButton.hidden = false;
+  document.querySelector('.health-left').style.width = '100%';
+  document.querySelector('.health-right').style.width = '100%';
   document.querySelector('#fatality').hidden = true;
-  document.querySelector('#restart').hidden = true; 
+  document.querySelector('#restart').hidden = true;
+
 }
 
 
@@ -110,26 +119,29 @@ const restartGame = () => {
 let scorpian = new Hero({
   name: 'Scorpian',
   move: 'sting',
-  image: '/images/yellow-guy-resize.png'
+  image: '/images/yellow-guy-resize.png',
+  value: 1
 });
 
 let subZero = new Hero({
   name: 'Sub Zero',
   move: 'frostbite',
-  image: '/images/sub-zero.png'
+  image: '/images/sub-zero.png',
+  value: 2
 });
 
 let freddy = new Enemy({
   name: 'Freddy',
   move: 'nightmare',
   image: '/images/freddy.png',
-})
+  value: 3
+});
 
 let ermac = new Enemy({
   name: 'Ermac',
   move: 'crush',
-  image: '/images/green-guy.png'
-})
+  image: '/images/green-guy.png',
+  value: 4
+});
 
-let heros = [scorpian, subZero];
-let enemies = [freddy, ermac];
+var characters = ['scorpian', 'subZero', 'freddy', 'ermac'];
