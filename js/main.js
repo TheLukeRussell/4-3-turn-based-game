@@ -41,9 +41,17 @@ class Hero {
     this.damage = options.damage;
     this.name = options.name;
     this.move = options.move;
-    Hero.health = 100;
+    this.health = options.health;
+
+    if(this.health == undefined) {
+      this.health = 100;
+    }
+    if(this.damge == undefined) {
+      this.damage = 20;
+    }
   }
 }
+  
 
 class Enemy {
   constructor(options) {
@@ -52,7 +60,14 @@ class Enemy {
     this.damage = options.damage;
     this.name = options.name;
     this.move = options.move;
-    Enemy.health = 100;
+    this.health = options.health;
+
+    if(this.health == undefined) {
+      this.health = 100;
+    }
+    if(this.damge == undefined) {
+      this.damage = 20;
+    }
   }
 }
 const attack = () => {
@@ -112,35 +127,24 @@ const restartGame = () => {
 let scorpian = new Hero({
   name: 'Scorpian',
   move: 'sting',
-  health: 100,
-  damage: 20,
   image: '/images/yellow-guy-resize.png'
 });
 
 let subZero = new Hero({
   name: 'Sub Zero',
   move: 'frostbite',
-  health: 100,
-  damage: 20,
-
   image: '/images/sub-zero.png'
 });
 
 let freddy = new Enemy({
   name: 'Freddy',
   move: 'nightmare',
-  health: 100,
-  damage: 20,
-
-  image: '/images/freddy.png'
+  image: '/images/freddy.png',
 })
 
 let ermac = new Enemy({
   name: 'Ermac',
   move: 'crush',
-  health: 100,
-  damage: 20,
-
   image: '/images/green-guy.png'
 })
 
