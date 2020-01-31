@@ -17,6 +17,9 @@ btn.onclick = function () {
   logo.style.width = '15%';
   logo.style.left = '41.8%';
 }
+document.querySelector('audio').volume = .1; // lowers volume of main audio
+
+
 // const fightPage = document.querySelector('.fight-page')
 // const choseFighter = document.getElementByClassName('.pick-me');
 
