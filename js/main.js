@@ -19,6 +19,7 @@ btn.onclick = function() {
   logo.style.left = '41.8%';
 }
 
+
 // When the user clicks on <span> (x), close the modal
 // span.onclick = function() {
 //   modal.style.display = "none";
@@ -38,12 +39,8 @@ class Hero {
     options = options || {};
 
     this.name = options.name;
-    this.attack = options.attack;
-
-    this.heroDamage = function(){
-      let hit = Math.floor(Math.random() * 15) + 5;
-      // console.log(hit);
-  }
+    this.move = options.move;
+    this.health = options.health;
 }
 }
 
@@ -52,40 +49,50 @@ class Enemy{
     options = options || {};
 
     this.name = options.name;
-    this.attack = options.attack;
+    this.move = options.move;
+    this.health = options.health;
+}
+}
+const attack = () => {
+  let fightButton = document.querySelector(''); //identify fight button
+  let heroAttack = Math.floor(Math.random() * 15); // <button id='' onclick="attack()">FIGHT</button> for fight button to make it work
+  Enemy.health = Enemy.health - heroAttack //subtracts player attack from opponent health
+  // insert code that makes health bar change width when opponent loses health
+  // console.log(heroAttack)
 
-    this.enemyDamage = function(){
-      let hit = Math.floor(Math.random() * 15) + 5;
-      console.log(hit);
-  }
+  fightButton.disabled = true; //disables fight button so user cant button mash
 }
-}
+
 
 let scorpian = new Hero({
   name: 'Scorpian',
-  attack: 'sting',
+  move: 'sting',
   health: 100,
+
   image: '/images/yellow-guy-resize.png'
 });
 
 let subZero = new Hero({
   name: 'Sub Zero',
-  attack: 'frostbite',
+  move: 'frostbite',
   health: 100,
+
   image: '/images/sub-zero.png'
 });
 
 let freddy = new Enemy({
   name: 'Freddy',
-  attack: 'nightmare',
+  move: 'nightmare',
   health: 100,
+
   image: '/images/freddy.png'
 })
 
 let ermac = new Enemy({
   name: 'Ermac',
-  attack: 'crush',
+  move: 'crush',
   health: 100,
+
   image: '/images/green-guy.png'
 })
 
