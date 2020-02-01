@@ -126,6 +126,7 @@ const attack = () => {
   enemyHealth = enemyHealth - heroAttack; //subtracts player attack from opponent health
   $('.health-right').css("width", enemyHealth + "%");
   // console.log(heroAttack)
+  document.querySelector('#user-attack').play();
   opponentMove.hidden = false;
   fightButton.disabled = true; //disables fight button so user cant button mash
 
@@ -145,7 +146,8 @@ const attack = () => {
     // console.log(enemyAttack)
     fightButton.disabled = false; //disables fight button when opponent attacks
     opponentMove.hidden = true;
-  }, 1000);
+    document.querySelector('#opp-attack').play();
+  }, 1500);
 }
 
 let audio = new Audio();
