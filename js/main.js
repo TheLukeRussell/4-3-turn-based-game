@@ -19,17 +19,21 @@ btn.onclick = function () {
 }
 document.querySelector('audio').volume = .1; // lowers volume of main audio
 
-// choseFighter.onclick = function() {
-//   modal.style.display = 'none';
-//   logo.style.display = 'none';
-//   btn.style.display = 'none';
-//   fightPage.style.display = 'flex';
-// }
 const fightPage = document.querySelector('.fight-page');
 const enemy = document.querySelector('.enemy'); //selects the computer fighter
 const fighter = document.querySelector('.fighter'); //selects the user fighter
 const playerName = document.querySelector('.play-name'); //selects name above character
+const comName = document.querySelector('.com-name'); //selects name above computer
 let players = document.querySelectorAll('.pick-me');
+
+const user = (x) => {
+  fighter.src = x.image
+  playerName.textContent = x.name
+}
+const computer = (x) => {
+  enemy.src = x.image
+  comName.textContent = x.name
+}
 
 players.forEach((player) => {
   player.addEventListener('click', function () {
@@ -37,24 +41,35 @@ players.forEach((player) => {
     logo.style.display = 'none';
     btn.style.display = 'none';
     fightPage.style.display = 'flex';
-    console.log(player.value); //shows which fighter button you choose
+    // console.log(player.value); //shows which fighter button you choose
 
+    let randomNumber = Math.floor(Math.random() * 3) + 1;
 
     if (player.value == 1) {
-      fighter.src = 'images/yellow-guy.png'
-      playerName.textContent = 'Scorpian'
+      user(scorpion)
     }
     if (player.value == 2) {
-      fighter.src = 'images/sub-zero.png'
-      playerName.textContent = 'Sub Zero'
+      user(subZero)
     }
     if (player.value == 3) {
-      fighter.src = 'images/freddy.png'
-      playerName.textContent = 'Freddy'
+      user(freddy)
     }
     if (player.value == 4) {
-      fighter.src = 'images/green-guy.png'
-      playerName.textContent = 'Ermac'
+      user(ermac)
+    }
+    
+
+    if (randomNumber == 1) {
+      computer(scorpion)
+    }
+    if (randomNumber == 2) {
+      computer(subZero)
+    }
+    if (randomNumber == 3) {
+      computer(freddy)
+    }
+    if (randomNumber == 4) {
+      computer(ermac)
     }
 
   });
@@ -66,6 +81,7 @@ class Hero {
 
     this.name = options.name;
     this.move = options.move;
+    this.image = options.image
   }
 }
 
@@ -75,6 +91,7 @@ class Enemy {
 
     this.name = options.name;
     this.move = options.move;
+    this.image = options.image;
   }
 }
 let enemyHealth = 100;
@@ -92,11 +109,11 @@ const attack = () => {
   fightButton.disabled = true; //disables fight button so user cant button mash
 
   if (heroHealth <= 0) {
-    fightMessage.textContent = "You Lose"
+    fightMessage.textContent = 'You Win!'
     endGame()
   }
   if (enemyHealth <= 0) {
-    fightMessage.textContent = "You Win!"
+    fightMessage.textContent = 'You Lose'
     endGame()
   }
 
@@ -133,8 +150,8 @@ const restartGame = () => {
   document.querySelector('#restart').hidden = true;
 }
 
-let scorpian = new Hero({
-  name: 'Scorpian',
+let scorpion = new Hero({
+  name: 'Scorpion',
   move: 'sting',
   image: '/images/yellow-guy-resize.png',
   value: 1
@@ -161,4 +178,4 @@ let ermac = new Enemy({
   value: 4
 });
 
-var characters = ['scorpian', 'subZero', 'freddy', 'ermac'];
+// var characters = ['scorpian', 'subZero', 'freddy', 'ermac'];
