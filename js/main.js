@@ -27,14 +27,19 @@ const fighter = document.querySelector('.fighter'); //selects the user fighter
 const playerName = document.querySelector('.play-name'); //selects name above character
 const comName = document.querySelector('.com-name'); //selects name above computer
 let players = document.querySelectorAll('.pick-me');
+const comMove = document.querySelector('.com-move');
+const playerMove = document.querySelector('.play-move');
 
 const user = (x) => {
   fighter.src = x.image
   playerName.textContent = x.name
+  playerMove.textContent = x.move
 }
 const computer = (x) => {
   enemy.src = x.image
   comName.textContent = x.name
+  comMove.textContent = x.move
+
 }
 players.forEach((player) => {
   player.addEventListener('mouseenter', function () {
@@ -127,17 +132,18 @@ const attack = () => {
   $('.health-right').css("width", enemyHealth + "%");
   // console.log(heroAttack)
   document.querySelector('#user-attack').play();
-  opponentMove.hidden = false;
+  // opponentMove.hidden = false;
   fightButton.disabled = true; //disables fight button so user cant button mash
 
   if (heroHealth <= 0) {
-    fightMessage.textContent = 'You Win!'
+    fightMessage.textContent = `${comName.textContent} Wins :(`
     endGame()
   }
   if (enemyHealth <= 0) {
-    fightMessage.textContent = 'You Lose'
+    fightMessage.textContent = `${playerName.textContent} Wins!`
     endGame()
   }
+  opponentMove.textContent = `${playerName.textContent} uses ${playerMove.textContent}!`
 
   setTimeout(() => {
     let enemyAttack = Math.floor(Math.random() * 20);
@@ -145,7 +151,7 @@ const attack = () => {
     $('.health-left').css("width", heroHealth + "%");
     // console.log(enemyAttack)
     fightButton.disabled = false; //disables fight button when opponent attacks
-    opponentMove.hidden = true;
+    opponentMove.textContent = `${comName.textContent} uses ${comMove.textContent}!`
     document.querySelector('#opp-attack').play();
   }, 1500);
 }
@@ -157,6 +163,7 @@ const endGame = () => {
   document.querySelector('#fatality').hidden = false;
   document.querySelector('#attack-btn').hidden = true; // identify fight button
   document.querySelector('#restart').hidden = false;
+  fightMessage.hidden = false;
   audio.play();
 }
 
@@ -176,42 +183,42 @@ const restartGame = () => {
 
 let scorpion = new Hero({
   name: 'Scorpion',
-  move: 'sting',
+  move: 'Sting',
   image: '/images/yellow-guy-resize.png',
   value: 1
 });
 
 let subZero = new Hero({
   name: 'Sub Zero',
-  move: 'frostbite',
+  move: 'Frostbite',
   image: '/images/sub-zero.png',
   value: 2
 });
 
 let freddy = new Enemy({
   name: 'Freddy',
-  move: 'nightmare',
+  move: 'Nightmare',
   image: '/images/freddy.png',
   value: 3
 });
 
 let ermac = new Enemy({
   name: 'Ermac',
-  move: 'crush',
+  move: 'Crush',
   image: '/images/green-guy.png',
   value: 4
 });
 
 let quanChi = new Enemy({
   name: 'Quan Chi',
-  move: 'glowing-hands',
+  move: 'Glowing-Hands',
   image: '/images/quan-chi.png',
   value: 5
 })
 
 let kitana = new Hero({
   name: 'Kitana Rain',
-  move: 'whiplash',
+  move: 'Whiplash',
   image: '/images/kitana.png',
   value: 6
 })
