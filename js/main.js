@@ -19,9 +19,6 @@ btn.onclick = function () {
 }
 document.querySelector('audio').volume = .1; // lowers volume of main audio
 
-// const fightPage = document.querySelector('.fight-page')
-// const choseFighter = document.getElementByClassName('.pick-me');
-
 // choseFighter.onclick = function() {
 //   modal.style.display = 'none';
 //   logo.style.display = 'none';
@@ -29,7 +26,7 @@ document.querySelector('audio').volume = .1; // lowers volume of main audio
 //   fightPage.style.display = 'flex';
 // }
 const fightPage = document.querySelector('.fight-page');
-
+const fighter = document.querySelector('.fighter')
 let players = document.querySelectorAll('.pick-me');
 
 players.forEach((player) => {
@@ -38,6 +35,26 @@ players.forEach((player) => {
     logo.style.display = 'none';
     btn.style.display = 'none';
     fightPage.style.display = 'flex';
+    console.log(player.value);
+    // fighter.src = 'images/yellow-guy.png'
+
+    if (player.value == 1) {
+      fighter.src = 'images/yellow-guy.png'
+    } 
+    if (player.value == 2) {
+      fighter.src = 'images/sub-zero.png'
+    }
+    if (player.value == 3) {
+      fighter.src = 'images/freddy.png'
+    }
+    if (player.value == 4) {
+      fighter.src = 'images/green-guy.png'
+    };
+
+
+
+
+
   });
 });
 
