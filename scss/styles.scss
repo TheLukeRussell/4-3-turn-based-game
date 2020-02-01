@@ -36,7 +36,6 @@ background-repeat: no-repeat;
     // display: none;
   }
 
-
   button::after {
     content: "Pick Your Fighter";
   }
@@ -145,6 +144,16 @@ h2 {
   position: relative;
   left: 40%;
   animation: blink 1s infinite;
+}
+#opponent-move {
+  text-align: center;
+  color: #FFF;
+  background-color: #000;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  left: 0%;
+  top: 60%;
 }
 
 .close {

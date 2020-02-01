@@ -16,7 +16,7 @@ btn.onclick = function () {
   btn.style.display = 'none';
   logo.style.width = '15%';
   logo.style.left = '41.8%';
-  document.querySelector('#play').play();
+  document.querySelector('#play').play(); //plays roar when selecting pick fighter button
 }
 document.querySelector('audio').volume = .05; // lowers volume of main audio
 document.querySelector('#play').volume = .2;
@@ -38,7 +38,7 @@ const computer = (x) => {
 }
 players.forEach((player) => {
   player.addEventListener('mouseenter', function () {
-    document.querySelector('#char-hover').play();
+    document.querySelector('#char-hover').play(); //plays sound on character hover
   });
 });
 
@@ -49,8 +49,7 @@ players.forEach((player) => {
     logo.style.display = 'none';
     btn.style.display = 'none';
     fightPage.style.display = 'flex';
-    document.querySelector('#char-play').play();
-    // console.log(player.value); //shows which fighter button you choose
+    document.querySelector('#char-play').play(); //audio when you choose character
 
     let randomNumber = Math.floor(Math.random() * 4) + 1;
 
@@ -119,6 +118,7 @@ let enemyHealth = 100;
 let heroHealth = 100;
 
 const attack = () => {
+  let opponentMove = document.querySelector('#opponent-move')
   let fightButton = document.querySelector('#attack-btn'); // identify fight button
   let restart = document.querySelector('#restart'); // identify reset button <button id='' onclick="restart()" hidden="true">FIGHT</button>
   let fightMessage = document.querySelector('#fight-message') // identifys whos turn it is or gives a move message
@@ -126,7 +126,7 @@ const attack = () => {
   enemyHealth = enemyHealth - heroAttack; //subtracts player attack from opponent health
   $('.health-right').css("width", enemyHealth + "%");
   // console.log(heroAttack)
-
+  opponentMove.hidden = false;
   fightButton.disabled = true; //disables fight button so user cant button mash
 
   if (heroHealth <= 0) {
@@ -143,9 +143,9 @@ const attack = () => {
     heroHealth = heroHealth - enemyAttack;
     $('.health-left').css("width", heroHealth + "%");
     // console.log(enemyAttack)
-
     fightButton.disabled = false; //disables fight button when opponent attacks
-  }, 100);
+    opponentMove.hidden = true;
+  }, 1000);
 }
 
 let audio = new Audio();
