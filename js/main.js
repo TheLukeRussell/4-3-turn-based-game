@@ -18,8 +18,9 @@ btn.onclick = function () {
   logo.style.left = '41.8%';
   document.querySelector('#play').play();
 }
-document.querySelector('audio').volume = .1; // lowers volume of main audio
-document.querySelector('#play').volume = .3;
+document.querySelector('audio').volume = .05; // lowers volume of main audio
+document.querySelector('#play').volume = .2;
+document.querySelector('#char-hover').volume = .2
 const fightPage = document.querySelector('.fight-page');
 const enemy = document.querySelector('.enemy'); //selects the computer fighter
 const fighter = document.querySelector('.fighter'); //selects the user fighter
@@ -35,6 +36,11 @@ const computer = (x) => {
   enemy.src = x.image
   comName.textContent = x.name
 }
+players.forEach((player) => {
+  player.addEventListener('mouseenter', function () {
+    document.querySelector('#char-hover').play();
+  });
+});
 
 players.forEach((player) => {
   player.addEventListener('click', function () {
