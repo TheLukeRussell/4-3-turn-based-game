@@ -16,9 +16,10 @@ btn.onclick = function () {
   btn.style.display = 'none';
   logo.style.width = '15%';
   logo.style.left = '41.8%';
+  document.querySelector('#play').play();
 }
 document.querySelector('audio').volume = .1; // lowers volume of main audio
-
+document.querySelector('#play').volume = .3;
 const fightPage = document.querySelector('.fight-page');
 const enemy = document.querySelector('.enemy'); //selects the computer fighter
 const fighter = document.querySelector('.fighter'); //selects the user fighter
@@ -38,12 +39,14 @@ const computer = (x) => {
 players.forEach((player) => {
   player.addEventListener('click', function () {
     modal.style.display = 'none';
+
     logo.style.display = 'none';
     btn.style.display = 'none';
     fightPage.style.display = 'flex';
+    document.querySelector('#char-play').play();
     // console.log(player.value); //shows which fighter button you choose
 
-    let randomNumber = Math.floor(Math.random() * 3) + 1;
+    let randomNumber = Math.floor(Math.random() * 4) + 1;
 
     if (player.value == 1) {
       user(scorpion)
@@ -56,6 +59,12 @@ players.forEach((player) => {
     }
     if (player.value == 4) {
       user(ermac)
+    }
+    if (player.value == 5) {
+      user(quanChi)
+    }
+    if (player.value == 6) {
+      user(kitana)
     }
     
 
@@ -70,6 +79,12 @@ players.forEach((player) => {
     }
     if (randomNumber == 4) {
       computer(ermac)
+    }
+    if (randomNumber == 5) {
+      computer(quanChi)
+    }
+    if (randomNumber == 6) {
+      computer(kitana)
     }
 
   });
@@ -141,6 +156,7 @@ const restartGame = () => {
   let attackButton = document.querySelector('#attack-btn')
   enemyHealth = 100;
   heroHealth = 100;
+  document.querySelector('#restart-play').play();
   document.querySelector('#fight-message').textContent = ''
   attackButton.disabled = false;
   attackButton.hidden = false;
@@ -178,4 +194,17 @@ let ermac = new Enemy({
   value: 4
 });
 
+let quanChi = new Enemy({
+  name: 'Quan Chi',
+  move: 'glowing-hands',
+  image: '/images/quan-chi.png',
+  value: 5
+})
+
+let kitana = new Hero({
+  name: 'Kitana Rain',
+  move: 'whiplash',
+  image: '/images/kitana.png',
+  value: 6
+})
 // var characters = ['scorpian', 'subZero', 'freddy', 'ermac'];

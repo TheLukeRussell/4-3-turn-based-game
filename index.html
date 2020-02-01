@@ -26,7 +26,7 @@
         </div>
         <div class="row">
             <div class="col-12 pick-fighter">
-                <button id="myBtn"></button>
+                <button id="myBtn"><audio id="play" src="/music/lion-sound.mp3"></audio></button>
                 
                  
 
@@ -44,34 +44,55 @@
                 </div>
             </div>
             <div class="row">
-          <div class="row no-gutter modal-content">
-            
+
+          <div class="row no-gutter modal-content"> 
             <button id="scorpon" value="1" class="col pick-me">
               <img src="images/yellow-guy-resize.png" alt="Scorpion" class="scorpion">
+              <audio id="char-play" src="/music/char-select.mp3"></audio>
               <h1>Scorpion</h1>
             </button>
           </div>
+
           <div class="row no-gutter modal-content">
-            
             <button id="subZero" value="2" class="col pick-me">
               <img src="images/sub-zero.png" alt="Sub Zero" class="freddy">
+              <audio id="char-play" src="/music/char-select.mp3"></audio>
               <h1>Sub Zero</h1>
             </button>
           </div>
+
           <div class="row no-gutter modal-content">
-            
+            <button id="kitana" value="6" class="col pick-me">
+              <img src="images/kitana.png" alt="Kitana Rain" class="kitana">
+              <audio id="char-play" src="/music/char-select.mp3"></audio>
+              <h1>Kitana Rain</h1>
+            </button>
+          </div>
+
+          <div class="row no-gutter modal-content">
             <button id="freddy" value="3" class="col pick-me">
               <img src="images/freddy.png" alt="Freedy" class="freedy">
+              <audio id="char-play" src="/music/char-select.mp3"></audio>
               <h1>Freddy</h1>
             </button>
           </div>
+
           <div class="row no-gutter modal-content">
-            
+            <button id="quan-chi" value="5" class="col pick-me">
+              <img src="images/quan-chi.png" alt="quan-chi" class="quan-chi">
+              <audio id="char-play" src="/music/char-select.mp3"></audio>
+              <h1>quan-chi</h1>
+            </button>
+          </div>
+
+          <div class="row no-gutter modal-content">
             <button id="ermac" value="4" class="col pick-me">
               <img src="images/green-guy.png" alt="Green-guy" class="green-guy">
+              <audio id="char-play" src="/music/char-select.mp3"></audio>
               <h1>Ermac</h1>
             </button>
           </div>
+          
         </div>
         <div class="row no-gutters">
             <div class="col-12 choose-character">
@@ -104,7 +125,8 @@
                     <h3 id="fight-message"></h3>
                     <div class="w-100"></div>
                     <button id="attack-btn" onclick="attack()" class="attack-btn">Attack</button>
-                    <button id='restart' onclick="restartGame()" hidden="true">RESTART</button>
+                    <button id='restart' onclick="restartGame()" hidden="true">RESTART
+                        <audio id="restart-play" src="/music/restart.mp3"></audio></button>
                 </div>
             </div>
 
