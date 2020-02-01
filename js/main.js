@@ -26,7 +26,9 @@ document.querySelector('audio').volume = .1; // lowers volume of main audio
 //   fightPage.style.display = 'flex';
 // }
 const fightPage = document.querySelector('.fight-page');
-const fighter = document.querySelector('.fighter')
+const enemy = document.querySelector('.enemy'); //selects the computer fighter
+const fighter = document.querySelector('.fighter'); //selects the user fighter
+const playerName = document.querySelector('.play-name'); //selects name above character
 let players = document.querySelectorAll('.pick-me');
 
 players.forEach((player) => {
@@ -35,25 +37,25 @@ players.forEach((player) => {
     logo.style.display = 'none';
     btn.style.display = 'none';
     fightPage.style.display = 'flex';
-    console.log(player.value);
-    // fighter.src = 'images/yellow-guy.png'
+    console.log(player.value); //shows which fighter button you choose
+
 
     if (player.value == 1) {
       fighter.src = 'images/yellow-guy.png'
-    } 
+      playerName.textContent = 'Scorpian'
+    }
     if (player.value == 2) {
       fighter.src = 'images/sub-zero.png'
+      playerName.textContent = 'Sub Zero'
     }
     if (player.value == 3) {
       fighter.src = 'images/freddy.png'
+      playerName.textContent = 'Freddy'
     }
     if (player.value == 4) {
       fighter.src = 'images/green-guy.png'
-    };
-
-
-
-
+      playerName.textContent = 'Ermac'
+    }
 
   });
 });

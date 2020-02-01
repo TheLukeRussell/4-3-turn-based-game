@@ -193,6 +193,13 @@ h1 {
   padding: 80px;
 }
 
+.enemy {
+  position: relative;
+  width: 80%;
+  top: 50px;
+  padding: 80px;
+}
+
 .center-area {
   position: relative;
 }
