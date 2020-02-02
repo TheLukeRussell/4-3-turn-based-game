@@ -152,7 +152,7 @@ const attack = () => {
     fightButton.disabled = false; //disables fight button when opponent attacks
     opponentMove.textContent = `${comName.textContent} uses ${comMove.textContent}!`
     document.querySelector('#opp-attack').play();
-  }, 1500);
+  }, 100);
 }
 
 // let audio = new Audio();
