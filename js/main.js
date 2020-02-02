@@ -132,7 +132,6 @@ const attack = () => {
   $('.health-right').css("width", enemyHealth + "%");
   // console.log(heroAttack)
   document.querySelector('#user-attack').play();
-  // opponentMove.hidden = false;
   fightButton.disabled = true; //disables fight button so user cant button mash
 
   if (heroHealth <= 0) {
@@ -156,15 +155,16 @@ const attack = () => {
   }, 1500);
 }
 
-let audio = new Audio();
-audio.src = "/music/fatality.mp3";
+// let audio = new Audio();
+// audio.src = "music/fatality.mp3";
 
 const endGame = () => {
+  document.querySelector('#fatality-sound').play();
   document.querySelector('#fatality').hidden = false;
   document.querySelector('#attack-btn').hidden = true; // identify fight button
   document.querySelector('#restart').hidden = false;
   fightMessage.hidden = false;
-  audio.play();
+  // audio.play();
 }
 
 const restartGame = () => {
