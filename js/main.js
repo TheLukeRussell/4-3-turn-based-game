@@ -156,15 +156,12 @@ const attack = () => {
   }, 1500);
 }
 
-let audio = new Audio();
-audio.src = "music/fatality.mp3";
-
 const endGame = () => {
+  document.querySelector('#fatality-sound').play();
   document.querySelector('#fatality').hidden = false;
   document.querySelector('#attack-btn').hidden = true; // identify fight button
   document.querySelector('#restart').hidden = false;
   fightMessage.hidden = false;
-  audio.play();
 }
 
 const restartGame = () => {
