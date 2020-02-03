@@ -184,42 +184,42 @@ const restartGame = () => {
 let scorpion = new Hero({
   name: 'Scorpion',
   move: 'Sting',
-  image: '/images/yellow-guy-resize.png',
+  image: '../images/yellow-guy-resize.png',
   value: 1
 });
 
 let subZero = new Hero({
   name: 'Sub Zero',
   move: 'Frostbite',
-  image: '/images/sub-zero.png',
+  image: '../images/sub-zero.png',
   value: 2
 });
 
 let freddy = new Enemy({
   name: 'Freddy',
   move: 'Nightmare',
-  image: '/images/freddy.png',
+  image: '../images/freddy.png',
   value: 3
 });
 
 let ermac = new Enemy({
   name: 'Ermac',
   move: 'Crush',
-  image: '/images/green-guy.png',
+  image: '../images/green-guy.png',
   value: 4
 });
 
 let quanChi = new Enemy({
   name: 'Quan Chi',
   move: 'Glowing-Hands',
-  image: '/images/quan-chi.png',
+  image: '../images/quan-chi.png',
   value: 5
 })
 
 let kitana = new Hero({
   name: 'Kitana Rain',
   move: 'Whiplash',
-  image: '/images/kitana.png',
+  image: '../images/kitana.png',
   value: 6
 })
 // var characters = ['scorpian', 'subZero', 'freddy', 'ermac'];
